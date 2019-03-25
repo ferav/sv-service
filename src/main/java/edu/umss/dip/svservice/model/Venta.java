@@ -14,8 +14,12 @@ import java.util.List;
 
 @Entity
 public class Venta extends ModelBase<VentaDto> {
-    @OneToOne(optional = false)
+    @ManyToOne(fetch=FetchType.LAZY)
     private Cliente cliente;
+    //@OneToOne(optional = false)
+    //private Cliente cliente;
+    @OneToMany(mappedBy = "venta", fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
+    private List<Detalle> detalles = new ArrayList<>();
 
 
     @Temporal(TemporalType.TIMESTAMP)
@@ -39,5 +43,11 @@ public class Venta extends ModelBase<VentaDto> {
         this.date = date;
     }
 
+    public List<Detalle> getDetalles() {
+        return detalles;
+    }
 
+    public void setDetalles(List<Detalle> detalles) {
+        this.detalles = detalles;
+    }
 }

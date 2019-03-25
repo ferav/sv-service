@@ -20,7 +20,9 @@ public class Equipo extends ModelBase<EquipoDto> {
     private boolean vendido;
     private double precio;
     private Byte[] imagen;
-    @OneToOne(optional = false)
+    //@OneToOne(optional = false)
+    //private Categoria categoria;
+    @ManyToOne(fetch=FetchType.LAZY)
     private Categoria categoria;
 
 
