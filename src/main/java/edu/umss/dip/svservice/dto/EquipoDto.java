@@ -9,7 +9,7 @@ import org.modelmapper.ModelMapper;
 
 public class EquipoDto extends DtoBase<Equipo> {
 
-
+    private Long categoriaId;
     private String modelo;
     private String codigo;
     private boolean vendido;
@@ -56,10 +56,19 @@ public class EquipoDto extends DtoBase<Equipo> {
         this.imagen = imagen;
     }
 
+    public Long getCategoriaId() {
+        return categoriaId;
+    }
+
+    public void setCategoriaId(Long categoriaId) {
+        this.categoriaId = categoriaId;
+    }
+
     @Override
-    public EquipoDto toDto(Equipo equipo, ModelMapper mapper) {
-        super.toDto(equipo, mapper);
-        setImageBase64(equipo);
+    public EquipoDto toDto(Equipo element, ModelMapper mapper) {
+        super.toDto(element, mapper);
+        setCategoriaId(element.getCategoria().getId());
+        setImageBase64(element);
         return this;
     }
 

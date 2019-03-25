@@ -10,8 +10,7 @@ package edu.umss.dip.svservice.model;
 
 import edu.umss.dip.svservice.dto.EquipoDto;
 
-import javax.persistence.Entity;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 
 @Entity
@@ -23,8 +22,8 @@ public class Equipo extends ModelBase<EquipoDto> {
     private Byte[] imagen;
     @OneToOne(optional = false)
     private Categoria categoria;
-    //@OneToMany(mappedBy = "equipo", fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
-    //private List<Categoria> categorias = new ArrayList<>();
+
+
 
 
 
@@ -75,12 +74,6 @@ public class Equipo extends ModelBase<EquipoDto> {
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
     }
-/*
-    public List<Categoria> getCategorias() {
-        return categorias;
-    }
 
-    public void setCategorias(List<Categoria> categorias) {
-        this.categorias = categorias;
-    }*/
+
 }

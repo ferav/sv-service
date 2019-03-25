@@ -17,8 +17,7 @@ public class Categoria extends ModelBase {
     @OneToMany(mappedBy = "categoria", fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
     private List<Equipo> equipos = new ArrayList<>();
     private String nombre;
-    //@OneToOne(optional = false)
-    //private Equipo equipo;
+
 
 
     public List<Equipo> getEquipos() {
@@ -36,12 +35,5 @@ public class Categoria extends ModelBase {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-/*
-    public Equipo getEquipo() {
-        return equipo;
-    }
 
-    public void setEquipo(Equipo equipo) {
-        this.equipo = equipo;
-    }*/
 }
