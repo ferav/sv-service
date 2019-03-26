@@ -23,7 +23,7 @@ public class Equipo extends ModelBase<EquipoDto> {
     //@OneToOne(optional = false)
     //private Categoria categoria;
     @ManyToOne(fetch=FetchType.LAZY)
-    private Categoria categoria;
+    private Tipo tipo;
 
 
 
@@ -69,13 +69,11 @@ public class Equipo extends ModelBase<EquipoDto> {
         this.imagen = imagen;
     }
 
-    public Categoria getCategoria() {
-        return categoria;
+    public Tipo getTipo() {
+        return tipo;
     }
 
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;
+    public void setTipo(Tipo tipo) {
+        this.tipo = tipo;
     }
-
-
 }

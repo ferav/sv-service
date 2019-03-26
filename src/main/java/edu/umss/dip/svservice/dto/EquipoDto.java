@@ -67,7 +67,7 @@ public class EquipoDto extends DtoBase<Equipo> {
     @Override
     public EquipoDto toDto(Equipo element, ModelMapper mapper) {
         super.toDto(element, mapper);
-        setCategoriaId(element.getCategoria().getId());
+        setCategoriaId(element.getTipo().getId());
         setImageBase64(element);
         return this;
     }

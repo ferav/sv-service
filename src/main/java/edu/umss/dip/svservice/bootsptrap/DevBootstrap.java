@@ -16,13 +16,13 @@ import java.util.Date;
 public class DevBootstrap implements ApplicationListener<ContextRefreshedEvent> {
 
     private EquipoRepository equipoRepository;
-    private CategoriaRepository categoriaRepository;
 
-    public DevBootstrap(EquipoRepository equipoRepository,
-             CategoriaRepository categoriaRepository ) {
+
+    public DevBootstrap(EquipoRepository equipoRepository
+             ) {
 
         this.equipoRepository = equipoRepository;
-        this.categoriaRepository = categoriaRepository;
+
 
     }
 

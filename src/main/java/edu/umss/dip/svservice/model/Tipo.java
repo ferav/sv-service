@@ -12,9 +12,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class Categoria extends ModelBase {
+public class Tipo extends ModelBase {
 
-    @OneToMany(mappedBy = "categoria", fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
+    @OneToMany(mappedBy = "tipo", fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
     private List<Equipo> equipos = new ArrayList<>();
     private String nombre;
 
