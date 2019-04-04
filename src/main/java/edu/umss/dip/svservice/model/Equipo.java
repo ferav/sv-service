@@ -21,6 +21,9 @@ public class Equipo extends ModelBase<EquipoDto> {
     private String codigo;
     private boolean vendido;
     private double precio;
+    private String marca;
+    private String descripcion;
+    private long anio;
     @Lob
     private Byte[] imagen;
     //@OneToOne(optional = false)
@@ -81,5 +84,37 @@ public class Equipo extends ModelBase<EquipoDto> {
 
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public long getAnio() {
+        return anio;
+    }
+
+    public void setAnio(long anio) {
+        this.anio = anio;
+    }
+
+    public List<Imagen> getImagenes() {
+        return imagenes;
+    }
+
+    public void setImagenes(List<Imagen> imagenes) {
+        this.imagenes = imagenes;
     }
 }

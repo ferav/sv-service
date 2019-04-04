@@ -15,6 +15,9 @@ public class EquipoDto extends DtoBase<Equipo> {
     private boolean vendido;
     private double precio;
     private String imagen;
+    private String marca;
+    private String descripcion;
+    private long anio;
 
     public String getModelo() {
         return modelo;
@@ -62,6 +65,30 @@ public class EquipoDto extends DtoBase<Equipo> {
 
     public void setCategoriaId(Long categoriaId) {
         this.categoriaId = categoriaId;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public long getAnio() {
+        return anio;
+    }
+
+    public void setAnio(long anio) {
+        this.anio = anio;
     }
 
     @Override
