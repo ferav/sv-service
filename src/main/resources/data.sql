@@ -4,7 +4,7 @@ INSERT INTO categoria ( nombre, CREATED_AT, VERSION ) VALUES ('excavadoras','201
 INSERT INTO categoria ( nombre, CREATED_AT, VERSION ) VALUES ('cargadores de ruedas','2018-04-10 14:46:19.282', 0);
 INSERT INTO categoria ( nombre, CREATED_AT, VERSION ) VALUES ('tractor','2018-04-10 14:46:19.282', 0);
 INSERT INTO categoria ( nombre, CREATED_AT, VERSION ) VALUES ('motocultora','2018-04-10 14:46:19.282', 0);
---INSERT INTO equipo ( modelo,categoria_id,precio,vendido,descripcion,anio,marca, CREATED_AT, VERSION ) VALUES ('323DL',1,40000,false,'motor td122',2006,'CAT','2018-04-10 14:46:19.282', 0);
+INSERT INTO equipo ( modelo,categoria_id,precio,vendido,descripcion,anio,marca, CREATED_AT, VERSION ) VALUES ('323DL',1,40000,false,'motor td122',2006,'CAT','2018-04-10 14:46:19.282', 0);
 --INSERT INTO equipo ( modelo,categoria_id,precio,vendido, CREATED_AT, VERSION ) VALUES ('320DL',1,35000,false,'2018-04-10 14:46:19.282', 0);
 --INSERT INTO imagen ( equipo_id, CREATED_AT, VERSION ) VALUES (1,'2018-04-10 14:46:19.282', 0);
 --INSERT INTO imagen ( equipo_id, CREATED_AT, VERSION ) VALUES (1,'2018-04-10 14:46:19.282', 0);
